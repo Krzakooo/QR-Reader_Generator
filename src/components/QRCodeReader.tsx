@@ -102,9 +102,9 @@ const QRCodeReader: React.FC = () => {
     }, []);
 
     return (
-        <div style={{ textAlign: 'center' }}>
+        <div className='video-container'>
             {error && (
-                <div style={{ color: 'red', marginBottom: '10px' }}>
+                <div className='error'>
                     {error}
                 </div>
             )}
@@ -113,14 +113,7 @@ const QRCodeReader: React.FC = () => {
                     onClick={startVideo}
                     disabled={isLoading}
                     style={{
-                        padding: '12px 24px',
-                        fontSize: '16px',
-                        borderRadius: '4px',
-                        backgroundColor: '#007bff',
-                        color: 'white',
-                        border: 'none',
-                        cursor: 'pointer',
-                        opacity: isLoading ? 0.7 : 1,
+                        opacity: isLoading ? 0.7 : 1
                     }}
                 >
                     {isLoading ? 'Starting Camera...' : 'Click to Scan QR Code'}
@@ -128,7 +121,6 @@ const QRCodeReader: React.FC = () => {
             ) : (
                 <video 
                     ref={videoRef} 
-                    style={{ width: '100%', maxWidth: '640px', height: 'auto' }}
                     playsInline
                 />
             )}

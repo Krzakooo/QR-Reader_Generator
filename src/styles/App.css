@@ -38,6 +38,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    
 }
 
 button:hover {
@@ -54,9 +55,19 @@ button:hover {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    text-align: center;
+}
+
+.video-container > video {
+    width: 100%;
+    max-width: 640px;
+    border-radius: 8px;
+    height: 'auto';
+
 }
 
 .error {
     color: red;
     text-align: center;
+    margin-bottom: '10px';
 }
